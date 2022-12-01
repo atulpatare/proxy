@@ -1,11 +1,22 @@
-<div align="center">
-    <h2><samp>Proxy Contracts with Sway</samp></h2>
-</div>
+## Proxy Contract
+
+Testing out sway's `LDC` opcode
 
 ### Execution
 
 - Build the contracts
 
 ```shell
-forc build
+forc build -p proxy
+forc build -p contract
+forc build -p contract_v2
+```
+
+- Run the tests
+
+```shell
+cargo test
+
+# to print println'
+cargo test -- --nocapture
 ```

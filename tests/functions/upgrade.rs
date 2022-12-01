@@ -17,7 +17,7 @@ async fn should_able_load_contract_in_proxy() {
     let (instance, _) = setup::get_proxy_contract_instance().await;
     let (_, my_contract_id) = setup::get_my_contract_instance().await;
 
-    let contract_addr = Bits256(*my_contract_id.hash);
+    let contract_addr = Bits256(*my_contract_id.hash());
     let result = instance
         .methods()
         .upgrade(contract_addr)

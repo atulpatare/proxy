@@ -13,11 +13,11 @@ impl Proxy for Contract {
 
         /*
          rA: contract id
-         rB: index to start copy from
-         rC: amount of bytes to copy
+         rB: index to start copy from, (contract offset)
+         rC: amount of bytes to copy (length of code)
          ref: https://fuellabs.github.io/fuel-specs/master/vm/instruction_set.html?highlight=ldc#ldc-load-code-from-an-external-contract
         */
-        asm(rA: contract_id, rB: 0, rC: 60) {
+        asm(rA: contract_id, rB, rC) {
             ldc rA rB rC;
         }
     }

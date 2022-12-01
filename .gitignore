@@ -1,0 +1,12 @@
+# cargo build outputs
+target/
+out/
+
+# lock files
+*.lock
+
+# ide files
+.idea/
+.vscode/
+
+# others

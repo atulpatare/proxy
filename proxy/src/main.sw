@@ -6,7 +6,7 @@ abi Proxy {
 
 impl Proxy for Contract {
     fn upgrade(contract_id: b256) {
-        asm(output: true, rC, rB: contract_id, rA) {
+        asm(output: false, rA: contract_id, rB: 0, rC: 60) {
             ldc rA rB rC;
         }
     }

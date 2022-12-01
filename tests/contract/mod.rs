@@ -1,7 +1,6 @@
 use fuels::prelude::*;
 
 pub mod setup {
-
     use super::*;
 
     // Load abi from json
@@ -13,8 +12,8 @@ pub mod setup {
     pub async fn get_wallets() -> Vec<WalletUnlocked> {
         launch_custom_provider_and_get_wallets(
             WalletsConfig::new(
-                Some(1), /* Single wallet */
-                Some(1), /* Single coin (UTXO) */
+                Some(5), /* Single wallet */
+                Some(100), /* Single coin (UTXO) */
                 Some(1_000_000_000), /* Amount per coin */
             ),
             None,
